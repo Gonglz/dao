@@ -276,3 +276,6 @@ Repositories known to use the Repository Agent Contract v1 family include:
 - `Gonglz/media-ingest`
 
 Individual repositories adopt a newer contract explicitly; changes in this repository do not silently alter project-local rules. This `Gonglz/main` repository is the bootstrap authority for the current shared contract version.
+## Documentation consistency gate
+
+All substantive PRs declare whether maintained documentation changed. Use the reusable `scripts/check_pr_docs.py` gate with the repo's PR template. This gate validates the declaration only; it is **not** a substitute for executable API/temporal/behavior contract tests. A contract-policy change requires explicit review before merge. Historical audits and ticket notes are not current requirements. Repo ownership, existing CI, and release authorization boundaries remain unchanged.
