@@ -18,3 +18,4 @@ jobs:
         with:
           python-version: "3.11"
       - run: python scripts/check_doc_languages.py
+      - run: python -m unittest discover -s tests -p 'test_doc_languages.py'
