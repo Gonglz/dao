@@ -275,4 +275,4 @@ Repositories known to use the Repository Agent Contract v1 family include:
 - `Gonglz/pi-console`
 - `Gonglz/media-ingest`
 
-Individual repositories adopt a newer contract explicitly; changes in this repository do not silently alter project-local rules. This `Gonglz/main` repository is the bootstrap authority for the current shared contract version.
+Individual repositories adopt a newer contract explicitly; changes in this repository do not silently alter project-local rules. This `Gonglz/dao` repository is the bootstrap authority for the current shared contract version.
