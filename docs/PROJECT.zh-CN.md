@@ -1,4 +1,4 @@
-<!-- Source blob SHA: f375b51f5b38afd7f0937b41fc5d096fc0a2c3c0 -->
+<!-- Source blob SHA: cb1f28e1c6f195672ec237ed3a9686453c4f5106 -->
 # 共享工程开发闭环（中文译文）
 
 **状态：Repository Agent Contract v1.3**  
@@ -284,3 +284,7 @@ PR_UPDATED
 - `Gonglz/media-ingest`
 
 各仓库必须明确决定是否采用更新版本；DAO 的变化不会自动修改项目的本地规则。`Gonglz/dao` 是当前共享契约版本的初始权威仓库。
+
+## 文档一致性检查
+
+所有具有实质内容的 PR 都必须声明是否影响当前维护的文档。使用共享的 `scripts/check_pr_docs.py` 检查器和仓库的 PR 模板。该检查器只验证文档影响声明，**不能替代**对 API、时间语义或实际行为的可执行契约测试。改变契约政策须经过明确审核，才能合并。历史审计和 Ticket 记录不是当前有效规范。仓库所有权、现有 CI 和发布授权边界保持不变。

@@ -116,3 +116,6 @@ PR_UPDATED
 ```
 
 If a required item is not satisfied, report the task as incomplete or blocked rather than `PASS`. If an item is not applicable, say so explicitly.
+## Documentation consistency gate
+
+All substantive PRs declare whether maintained documentation changed. Use the reusable `scripts/check_pr_docs.py` gate with the repo's PR template. This gate validates the declaration only; it is **not** a substitute for executable API/temporal/behavior contract tests. A contract-policy change requires explicit review before merge. Historical audits and ticket notes are not current requirements. Repo ownership, existing CI, and release authorization boundaries remain unchanged.
