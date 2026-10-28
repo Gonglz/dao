@@ -18,10 +18,19 @@ def test_doc_updated_requires_doc_path_and_reference():
     assert check(body, ["src/example.py"])
 
 
-def test_contract_change_requires_evidence_and_tests():
-    body = "## Documentation Impact\n- [x] Contract change requires review\nContract evidence: Ticket 130 redline, approval pending\nTests: tests/test_public_contract.py"
-    assert check(body, ["src/example.py"]) == []
-    assert check(body.replace("Tests: tests/test_public_contract.py", "Tests: n/a"), ["src/example.py"])
+def test_contract_change_requires_evidence_tests_and_actual_maintained_doc():
+    body = (
+        "## Documentation Impact\n- [x] Contract change requires review\n"
+        "Affected docs: docs/PROJECT.md\n"
+        "Contract evidence: Ticket 130 redline, approval pending\n"
+        "Tests: tests/test_public_contract.py"
+    )
+    files = ["src/example.py", "docs/PROJECT.md"]
+    assert check(body, files) == []
+    assert check(body, ["src/example.py"])  # an audit note is NOT a contract update
+    assert check(body, ["src/example.py", "docs/audits/audit.md"])
+    assert check(body.replace("docs/PROJECT.md", "docs/wrong.md"), files)
+    assert check(body.replace("Tests: tests/test_public_contract.py", "Tests: n/a"), files)
 
 
 def test_multiple_selections_fail():

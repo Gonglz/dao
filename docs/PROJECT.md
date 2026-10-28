@@ -68,6 +68,10 @@ A historical green audit is not proof of current correctness. Old plans/specs mu
 
 Project-specific rules stay in the project repository. This repository owns only the common convention.
 
+## Documentation Impact enforcement (updated 2026-10-28)
+
+`scripts/check_pr_docs.py` is the shared deterministic PR declaration gate. For a **contract change**, the PR must actually modify a maintained documentation file and identify it under `Affected docs:`, alongside `Contract evidence:` and `Tests:`. An audit/history note, temporary ticket document, or assertion with no maintained diff does not count. For ordinary implementation changes, a justified `No maintained documentation change` remains allowed when reviewed. The checker validates declared impact and changed paths; it **does not** prove semantic alignment or override branch protection, code tests, or review.
+
 ## Agent workflow
 
 Before work:
