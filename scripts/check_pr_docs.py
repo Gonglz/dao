@@ -58,9 +58,15 @@ def check(body: str, paths: list[str]) -> list[str]:
     elif choice == OPTIONS[1]:
         if not maintained_docs:
             errors.append("Docs-updated selected but no maintained documentation file is in the diff.")
-        if len(_field(body, "Affected docs")) < 5:
-            errors.append("List affected documentation (Affected docs: ...).")
+        affected = _field(body, "Affected docs")
+        if not any(path in affected for path in maintained_docs):
+            errors.append("Affected docs must reference a maintained document actually changed in the PR.")
     else:
+        if not maintained_docs:
+            errors.append("Contract-change PR must update a maintained domain or Root contract document.")
+        affected = _field(body, "Affected docs")
+        if not any(path in affected for path in maintained_docs):
+            errors.append("Contract-change PR must name a maintained document actually changed (Affected docs: ...).")
         if len(_field(body, "Contract evidence")) < 8:
             errors.append("Describe the proposed contract change and approval reference (Contract evidence: ...).")
         if len(_field(body, "Tests")) < 5:
