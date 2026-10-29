@@ -1,4 +1,4 @@
-<!-- Source blob SHA: 518c3a3514392a1251e741962c401cdbe31c8bb3 -->
+<!-- Source blob SHA: 874d3a0f6c6d471008001ece300da3ce5c41c15d -->
 # DAO — 共享工程规范
 
 **语言：** [English](README.md) | 简体中文
@@ -12,6 +12,7 @@ DAO 是 Gonglz 各项目共享的工程规范与 Agent 开发工作流控制仓�
 | [AGENTS.md](AGENTS.md) | [AGENTS.zh-CN.md](AGENTS.zh-CN.md) | Agent 指令与安全边界 |
 | [docs/PROJECT.md](docs/PROJECT.md) | [docs/PROJECT.zh-CN.md](docs/PROJECT.zh-CN.md) | GitHub、Runner 与执行证据工作流 |
 | [templates/CHAT_TASK_PROMPT.md](templates/CHAT_TASK_PROMPT.md) | [templates/CHAT_TASK_PROMPT.zh-CN.md](templates/CHAT_TASK_PROMPT.zh-CN.md) | 精简的任务提示词模板 |
+| [templates/STAKEHOLDER_STATUS_BRIEF.md](templates/STAKEHOLDER_STATUS_BRIEF.md) | [templates/STAKEHOLDER_STATUS_BRIEF.zh-CN.md](templates/STAKEHOLDER_STATUS_BRIEF.zh-CN.md) | 面向非技术领导的可选项目汇报提示词 |
 
 ## 规范效力与翻译维护
 

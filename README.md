@@ -11,6 +11,7 @@ DAO is the shared engineering control plane for repository conventions and agent
 | [AGENTS.md](AGENTS.md) | [AGENTS.zh-CN.md](AGENTS.zh-CN.md) | Agent instructions and safety boundaries |
 | [docs/PROJECT.md](docs/PROJECT.md) | [docs/PROJECT.zh-CN.md](docs/PROJECT.zh-CN.md) | Shared GitHub/runner/evidence workflow |
 | [templates/CHAT_TASK_PROMPT.md](templates/CHAT_TASK_PROMPT.md) | [templates/CHAT_TASK_PROMPT.zh-CN.md](templates/CHAT_TASK_PROMPT.zh-CN.md) | Lightweight task prompt template |
+| [templates/STAKEHOLDER_STATUS_BRIEF.md](templates/STAKEHOLDER_STATUS_BRIEF.md) | [templates/STAKEHOLDER_STATUS_BRIEF.zh-CN.md](templates/STAKEHOLDER_STATUS_BRIEF.zh-CN.md) | Optional plain-language project/status reporting prompt |
 
 ## Authority and translations
 
