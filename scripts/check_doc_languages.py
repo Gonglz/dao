@@ -15,6 +15,7 @@ PAIRS = (
     ("AGENTS.md", "AGENTS.zh-CN.md"),
     ("docs/PROJECT.md", "docs/PROJECT.zh-CN.md"),
     ("templates/CHAT_TASK_PROMPT.md", "templates/CHAT_TASK_PROMPT.zh-CN.md"),
+    ("templates/STAKEHOLDER_STATUS_BRIEF.md", "templates/STAKEHOLDER_STATUS_BRIEF.zh-CN.md"),
 )
 STAMP = re.compile(r"\A<!-- Source blob SHA: ([0-9a-f]{40}) -->\r?\n")
 

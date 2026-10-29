@@ -1,4 +1,4 @@
-<!-- Source blob SHA: 928c544e9292935047fe533a801d2ea438f7404c -->
+<!-- Source blob SHA: 2de790d1848f3c56808e3ad3213e382e21073254 -->
 # Agent 指令（中文译文）
 
 **Repository Agent Contract：** v1.3
@@ -109,6 +109,17 @@ run_id = <UTC timestamp>_<git short sha>
 通知只是输出渠道，不是事实来源。默认通知终端是用户的 Windows 桌面：Windows 原生 Runner 直接通知；WSL、Pi、Jetson 和 macOS 通过私有 Tailscale 路径中继。GitHub 可以同时保留审计记录，但通知是否送达不是执行状态的权威依据。`status.json`／`result.json` 仍是权威状态。
 
 在仓库真正接入该接口以前，GitHub Checks 和日志仍然是有效证据，不得声称已产生 `result.json` 或完成 Artifact 发布。
+
+## 面向管理者的进度汇报
+
+当用户要求组会汇报、向非技术领导解释 Ticket 或介绍工程进度时，
+可使用[管理层进度汇报模板](templates/STAKEHOLDER_STATUS_BRIEF.zh-CN.md)。
+用通俗语言说明问题、已证实的原因、措施、结果、当前状态、
+下一步的风险或决策。保留不确定性，区分本地测试、合并、
+部署和生产验收。
+
+本模板只是沟通辅助，**不是新增验收关卡**。
+技术任务、安全限制和当前证据仍以目标仓库与任务契约为准。
 
 ## 完成契约
 

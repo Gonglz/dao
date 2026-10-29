@@ -101,6 +101,19 @@ Notifications are an output channel, not the source of truth. The default attent
 
 Until a repository wires this interface into CI/runtime, GitHub Checks and logs remain valid evidence, but the repository must not report `result.json` or artifact publication as completed.
 
+## Stakeholder-facing progress summaries
+
+When a user asks for a group-meeting update or a non-technical explanation
+of a Ticket, use the optional
+[stakeholder status brief](templates/STAKEHOLDER_STATUS_BRIEF.md).
+Explain problem, verified cause, action, result, current status, and next
+risk or decision in plain language. Preserve uncertainty and distinguish
+local tests, merge, deployment, and production acceptance.
+
+This is a communication aid, **not a new completion gate**. Technical
+work, safety rules, and current evidence remain governed by the affected
+repository and task contract.
+
 ## Completion contract
 
 Use these shared top-level completion fields exactly; project-specific gates belong inside the evidence payload rather than by renaming these fields.

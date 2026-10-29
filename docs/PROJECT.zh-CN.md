@@ -1,4 +1,4 @@
-<!-- Source blob SHA: cb1f28e1c6f195672ec237ed3a9686453c4f5106 -->
+<!-- Source blob SHA: 1e51d67fc6904bdae981ee25bc7e88da3748a56c -->
 # 共享工程开发闭环（中文译文）
 
 **状态：Repository Agent Contract v1.3**  
@@ -70,6 +70,19 @@ Ticket 定义目标、范围、限制、证据要求和完成标准；它本身�
 曾经通过的审计不证明今天仍然正确；使用旧方案／旧规格前，必须与当前代码、测试及运行证据对账。
 
 项目专用规则保留在项目仓库。本仓库只负责公共约定。
+
+## Documentation Impact 检查（2026-10-28 更新）
+
+`scripts/check_pr_docs.py` 是共享的、确定性的 PR 文档影响声明检查。
+当 PR 修改**契约**时，必须实际修改仍在维护的文档，并在
+`Affected docs:` 中注明，同时提供 `Contract evidence:` 和 `Tests:`。
+历史审计、临时 Ticket 文档或只有声明而没有相应文档变更，都不能
+算作契约文档已更新。普通实现变更如确实不影响维护中的文档，
+经说明和审核后仍可选择 `No maintained documentation change`。
+
+检查器只核对所声明的影响及变更路径，**不**证明文档与代码在语义上
+完全一致，也不会替代分支保护、代码测试或审查。
+
 
 ## Agent 工作流
 
